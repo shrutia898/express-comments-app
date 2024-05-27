@@ -14,16 +14,6 @@ app.set('views', path.join(__dirname, 'views'))
 let comments = [
     {
         id: uuid(),
-        username: 'sydney',
-        comment: 'i love shruti'
-    },
-    {
-        id: uuid(),
-        username: 'shruti',
-        comment: 'i love sydney'
-    },
-    {
-        id: uuid(),
         username: 'bailey',
         comment: 'i am a cat'
     },
@@ -33,15 +23,6 @@ let comments = [
         comment: 'i am also a cat'
     }
 ]
-
-app.get('/tacos', (req, res) =>{
-    res.send('get /tacos')
-})
-
-app.post('/tacos', (req, res) =>{
-    const {meat, qty} = req.body;
-    res.send(`meat : ${meat} || qty : ${qty}`)
-})
 app.listen(3000, () =>{
     console.log("Listening");
 })
